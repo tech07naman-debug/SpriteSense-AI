@@ -785,18 +785,21 @@ st.markdown(
 if model_error:
     st.error(f"Could not load the model: {model_error}")
 
+
 if model is None:
     st.warning(
-        "The trained model is not available. Place "
-        "`final_sprite_classifier.keras` in the same folder as `app.py`, "
-        "then restart the app."
+        f"The trained model is not available. "
+        f"Expected model location: `{MODEL_PATH.relative_to(BASE_DIR)}`. "
+        "Please check that the file exists and restart the app."
     )
+
     st.code(
         "project_folder/\n"
         "├── app.py\n"
-        "├── final_sprite_classifier.keras\n"
         "├── class_names.json\n"
-        "└── requirements.txt"
+        "├── requirements.txt\n"
+        "└── notebooks/\n"
+        "    └── final_sprite_classifier.keras"
     )
 
 # ---------------------------------------------------------
