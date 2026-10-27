@@ -23,7 +23,7 @@ st.set_page_config(
 )
 
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_PATH = BASE_DIR / "final_sprite_classifier.keras"
+MODEL_PATH = BASE_DIR / "notebooks/final_sprite_classifier.keras"
 CLASSES_PATH = BASE_DIR / "class_names.json"
 
 IMAGE_SIZE = (24, 24)
